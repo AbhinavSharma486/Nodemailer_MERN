@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from 'dotenv';
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import connectDB from "./lib/db.js";
 
 dotenv.config();
 
@@ -18,4 +19,5 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
+  connectDB();
 });
