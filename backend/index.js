@@ -21,6 +21,6 @@ app.get("/", (req, res) => {
 app.use('/api/auth', authRoutes);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Server is listening on port ${port}`);
   connectDB();
 });
